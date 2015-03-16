@@ -18,7 +18,7 @@ class IndexView(generic.ListView):
         """
         return Poll.objects.filter(
             pub_date__lte=timezone.now()
-        ).order_by('-pubdate')[:5]
+        ).order_by('-pub_date')[:5]
 
 class DetailView(generic.DetailView):
     model = Poll
